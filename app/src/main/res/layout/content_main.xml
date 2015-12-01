@@ -10,5 +10,31 @@
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
     <TextView android:text="Hello World!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" android:id="@+id/txtClue"
+              android:autoText="false"
+              android:textAlignment="center"
+              android:textSize="@dimen/abc_text_size_large_material"
+              android:gravity="center_vertical|center_horizontal"
+              android:foregroundGravity="center_vertical|center_horizontal"
+              android:layout_centerInParent="true"
+              android:paddingBottom="84px"/>
+
+   <android.support.design.widget.FloatingActionButton android:id="@+id/fabReveal"
+       android:layout_width="wrap_content" android:layout_height="wrap_content"
+       android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+       android:src="@android:drawable/ic_menu_help"
+                                                       android:layout_alignParentBottom="true"
+                                                       android:layout_alignParentRight="true"/>
+
+   <android.support.design.widget.FloatingActionButton android:id="@+id/fabFlip"
+       android:layout_width="wrap_content" android:layout_height="wrap_content"
+       android:layout_gravity="top|end" android:layout_margin="@dimen/fab_margin"
+       android:src="@android:drawable/ic_menu_rotate"
+                                                       android:layout_alignParentRight="true"/>
+
+   <android.support.design.widget.FloatingActionButton android:id="@+id/fabRemove"
+       android:layout_width="wrap_content" android:layout_height="wrap_content"
+       android:layout_gravity="bottom|start" android:layout_margin="@dimen/fab_margin"
+       android:src="@android:drawable/ic_delete"
+                                                       android:layout_alignParentBottom="true"/>
 </RelativeLayout>

@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by Pauly T on 11/19/2015.
+ * To retrieve flashcards from the datasource.
  */
 public class DataDao {
     public static List<Flashcard> getFlashcards(Integer level) throws Exception {
@@ -36,8 +37,8 @@ public class DataDao {
         CrudRepository repo = new CrudRepository(dbc);
 
         // create a document for use in this example
-        Flashcard fc = new Flashcard();
-        fc.setLevel(level);
+        //Flashcard fc = new Flashcard();
+        //fc.setLevel(level);
 
         // add the doc to the database
 //        System.out.println("Adding new document to database...");
@@ -77,12 +78,6 @@ public class DataDao {
         public List<Flashcard> getByLevel(Integer level) {
             return queryView("cardsByLevel", level);
         }
-    }
-
-    public class FlashcardResponse
-    {
-        @SerializedName("flashcards")
-        List<Flashcard> flashcards;
     }
 
 }
