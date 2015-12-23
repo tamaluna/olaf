@@ -1,0 +1,8 @@
+{"_id":"US_hello", "_ver":"", "level":1, "script":"Hello", "type":"word"}
+{"_id":"spa-MEX_hello", "_ver":"", "level":1, "script":"Hola", "type":"word"}
+{"_id":"US_good_morning", "_ver":"", "level":1, "script":"Good morning.", "type":"word"}
+{"_id":"spa-MEX_good_morning", "_ver":"", "level":1, "script":"Buenos dias.", "type":"word"}
+{"_id":"US_good_afternoon", "_ver":"", "level":1, "script":"Good afternoon.", "type":"word"}
+{"_id":"spa-MEX_good_afternoon", "_ver":"", "level":1, "script":"Buenas tardes.", "type":"word"}
+{"_id":"CHINA_hello", "_ver":"", "level":1, "script":"您好", "roman":"Nín hǎo", "type":"word"}
+{"_id":"hi-IN_hello", "_ver":"", "level":1, "script":"नमस्ते", "roman":"Namastee", "type":"word"}

@@ -36,10 +36,15 @@ public class Flashcard
     @SerializedName("foreign")
     @Expose
     private String foreign;
+    @SerializedName("foreignRoman")
+    @Expose
+    private String foreignRoman;
 
-    public Flashcard(String ntv, String frn) {
+    public Flashcard(String ntv, String frn, String frnRoman, Integer lvl) {
         text = ntv;
         foreign = frn;
+        foreignRoman = frnRoman;
+        level = lvl;
     }
 
     public Integer getItemID() { return itemID; }
@@ -66,6 +71,9 @@ public class Flashcard
     public String getForeign() { return foreign; }
     public void setForeign(String s) { foreign = s; }
 
+    public String getForeignRoman() { return foreignRoman; }
+    public void setForeignRoman(String s) { foreignRoman = s; }
+
     @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this);
@@ -73,7 +81,8 @@ public class Flashcard
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(itemID).append(level).append(type).append(active).append(nativeFirst).append(label).append(text).append(foreign).toHashCode();
+        return new HashCodeBuilder().append(itemID).append(level).append(type).append(active)
+              .append(nativeFirst).append(label).append(text).append(foreign).append(foreignRoman).toHashCode();
     }
 
     @Override
@@ -86,8 +95,9 @@ public class Flashcard
         }
         Flashcard rhs = ((Flashcard) other);
         return new EqualsBuilder().append(itemID, rhs.itemID).append(level, rhs.level)
-                .append(type, rhs.type).append(active, rhs.active).append(nativeFirst, rhs.nativeFirst)
-                .append(label, rhs.label).append(text, rhs.text).append(foreign, rhs.foreign).isEquals();
+            .append(type, rhs.type).append(active, rhs.active).append(nativeFirst, rhs.nativeFirst)
+            .append(label, rhs.label).append(text, rhs.text).append(foreign, rhs.foreign)
+            .append(foreignRoman, rhs.foreignRoman).isEquals();
     }
 
 }
